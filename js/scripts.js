@@ -52,7 +52,7 @@ BankAccount.prototype.withdraw = function (newWithdrawal) {
 
 BankAccount.prototype.depositWithdraw = function (deposit, withdraw) {
 
-  if(isNaN(deposit)) { // can also write it this way (deposit !== NaN)
+  if(isNaN(deposit)) { // can also write it by converting to a string then (deposit === "NaN")
     this.withdraw(withdraw);
   } else if (isNaN(withdraw)) {
     this.deposit(deposit);
